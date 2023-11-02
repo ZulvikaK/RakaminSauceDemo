@@ -17,15 +17,16 @@ public class login {
     WebDriver driver;
     String baseUrl = "https://www.saucedemo.com/";
 
-    @Given("user should be open https:\\/\\/www.saucedemo.com\\/ in web browser")
-    public void user_should_be_open_https_www_saucedemo_com_in_web_browser() throws Exception{
+    @Given("user launch swag labs web")
+    public void user_launch_swag_labs_web() {
         WebDriverManager.chromedriver().setup();
         ChromeOptions opt = new ChromeOptions();
 
-        driver = new ChromeDriver();
+        driver = new ChromeDriver(opt);
+        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         driver.manage().window().maximize();
         driver.get(baseUrl);
-        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+
     }
     @When("user input valid username and password")
     public void user_input_valid_username_and_password() throws Exception{
@@ -34,8 +35,8 @@ public class login {
         driver.findElement(By.id("password")).sendKeys("secret_sauce");
         Thread.sleep(500);
     }
-    @And("user click button login")
-    public void user_click_button_login() throws Exception {
+    @And("user click on login button")
+    public void user_click_on_login_button() throws Exception {
         driver.findElement(By.id("login-button")).click();
         Thread.sleep(500);
     }

@@ -45,19 +45,11 @@
         <scope>test</scope>
     </dependency>
 
-    <!-- https://mvnrepository.com/artifact/org.testng/testng -->
-    <dependency>
-        <groupId>org.testng</groupId>
-        <artifactId>testng</artifactId>
-        <version>7.7.1</version>
-        <scope>test</scope>
-    </dependency>
-
     <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
     <dependency>
         <groupId>io.github.bonigarcia</groupId>
         <artifactId>webdrivermanager</artifactId>
-        <version>5.5.2</version>
+        <version>5.5.3</version>
     </dependency>
 
 </dependencies>
